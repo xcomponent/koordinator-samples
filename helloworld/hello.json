@@ -1,0 +1,60 @@
+{
+	"id": "253dcdd0-d48f-11e9-82f7-3be379ca7634",
+	"name": "HelloWorld",
+	"type": "CommandCenter",
+	"tasks": [
+		{
+			"type": "Fork",
+			"catalogTaskDefinitionVersion": 0,
+			"id": "b461362c-ea2a-4e85-a129-2ee65c026fd9",
+			"maxRetriesOnError": 0,
+			"subTasks": [
+				{
+					"type": "Sequence",
+					"catalogTaskDefinitionVersion": 0,
+					"id": "b74b945e-9e5e-4726-aef0-bb4a5afb379c",
+					"maxRetriesOnError": 0,
+					"subTasks": [
+						{
+							"type": "Worker",
+							"catalogTaskDefinitionNamespace": "POPUP_USER",
+							"catalogTaskDefinitionVersion": 0,
+							"id": "14774896-13fd-44a0-82bc-5ffb12297098",
+							"description": "SayHello",
+							"inputData": {
+								"description": "Hello [workflowInstance.inputData.Name]",
+								"taskName": "Hello",
+								"scenarioInstanceName": "[WorkflowInstance.Name]"
+							},
+							"outputData": {
+								"Name": "[workflowInstance.inputData.Name]",
+								"Name#type": "string",
+								"Name#string": "string"
+							},
+							"maxRetriesOnError": 0
+						}
+					]
+				}
+			]
+		}
+	],
+	"inputData": {
+		"Name": "",
+		"Name#type": "string",
+		"Name#subtype": "string",
+		"Name#regex": ""
+	},
+	"outputData": {},
+	"live": true,
+	"timeoutInMillis": 0,
+	"workspaceName": "DefaultWorkspace",
+	"description": "",
+	"isDeleted": false,
+	"schemaVersion": 0,
+	"versionNumber": 9,
+	"versionUserName": "admin",
+	"versionTimeStamp": "2019-09-11T12:37:58.2962560Z",
+	"creationUserName": "admin",
+	"creationTimeStamp": "2019-09-11T12:27:23.2757460Z",
+	"requestId": "56d7f5ec-7524-4430-b3d5-0124c65a5c2d"
+}
